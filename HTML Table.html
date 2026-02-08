@@ -1,0 +1,76 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html>
+<head>
+  <title>My Online Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🛍 My Online Shop</h1>
+    <p>Your favorite items in one place</p>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/150" />
+      <h2>Cool Shoes</h2>
+      <p>$25</p>
+      <button onclick="addToCart('Cool Shoes')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" />
+      <h2>Nice Bag</h2>
+      <p>$18</p>
+      <button onclick="addToCart('Nice Bag')">Add to Cart</button>
+    </div>
+  </section>
+
+  <section class="cart">
+    <h2>🛒 Cart</h2>
+    <ul id="cart-list"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html><style>body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}</style><script>function addToCart(item) {
+  const list = document.getElementById("cart-list");
+  const li = document.createElement("li");
+  li.textContent = item;
+  list.appendChild(li);
+}</script>
